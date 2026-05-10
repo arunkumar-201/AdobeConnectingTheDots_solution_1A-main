@@ -339,10 +339,10 @@ python -m uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
 
 | 🎓 **Danda Arun Kumar** | 🎓 **Panchireddi Praveen** | 🎓 **Kollepara Venkata Sri Chakravarthi** |
 |------------------------|---------------------------|-----------------------------------------|
-| **Role:** Lead Developer & System Architect | **Role:** ML Engineer & AI Specialist | **Role:** Backend & DevOps Engineer |
+| **Role:** Lead Developer & System Architect& ML Engineer | **Role:** ML Engineer & AI Specialist | **Role:** Backend & DevOps Engineer |
 | **Education:** B.Tech – Data Science | **Education:** B.Tech – Information Technology | **Education:** B.Tech – Computer Science Engineering |
 | **Contributions:** | **Contributions:** | **Contributions:** |
-| • Developed PDF Structure Engine Core <br> • System Architecture Design <br> • Docker & CI/CD Pipeline Setup <br> • Performance Optimization <br> • API Design & Implementation | • Built ML Classification Models <br> • Font Analysis Algorithm Development <br> • Confidence Scoring System <br> • NLP-based Heading Detection <br> • Model Training & Validation | • Backend Infrastructure Development <br> • Database Design & Optimization <br> • Testing Framework Implementation <br> • Performance Monitoring Setup <br> • Production Deployment Strategy |
+| • Developed PDF Structure Engine Core <br> • System Architecture Design <br> • Docker & CI/CD Pipeline Setup <br> • Performance Optimization <br> • API Design & Implementation <br> • Built ML Classification Models <br> | • Built ML Classification Models <br> • Font Analysis Algorithm Development <br> • Confidence Scoring System <br> • NLP-based Heading Detection <br> • Model Training & Validation | • Backend Infrastructure Development <br> • Database Design & Optimization <br> • Testing Framework Implementation <br> • Performance Monitoring Setup <br> • Production Deployment Strategy |
 | **Skills:** Python, Docker, System Design, AI/ML | **Skills:** Machine Learning, NLP, TensorFlow, Data Science | **Skills:** Backend Development, DevOps, Testing, Cloud Infrastructure |
 
 </div>
