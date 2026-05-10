@@ -13,7 +13,7 @@
 ![Contributors](https://img.shields.io/badge/Contributors-3-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-✅ Works Fully Offline | 📦 <256MB Memory Usage | 🐳 Multi-Architecture Docker Support | ⚡ Sub-2s Processing
+✅ Works Fully Offline | 🐳 Multi-Architecture Docker Support | 💻 Local Execution
 
 [🚀 Quick Demo](#-live-demo) • [📖 Documentation](#-problem--solution) • [🏗 Architecture](#-system-architecture) • [⚡ Performance](#-performance-benchmarks) • [🎯 Hackathon Compliance](#-hackathon-compliance)
 
@@ -58,23 +58,15 @@ graph TD
 ## ✨ Core Features
 
 ### 🔍 Round 1A: PDF Structure Intelligence
-| Feature | Description | Performance |
-|---------|-------------|-------------|
-| 🎯 Smart Title Detection | AI-powered title extraction using advanced font analysis & positioning algorithms | 96% accuracy |
-| 📑 Hierarchical Parsing | Automatic H1/H2/H3 detection with proper nesting and confidence scoring | Sub-2s processing |
-| 📍 Precise Page Mapping | Exact page number association for every structural element | 100% accuracy |
-| ⚡ Batch Processing | Concurrent processing of 50+ PDFs simultaneously | 10x faster than manual |
-| 🏗 Typography Analysis | Advanced font pattern recognition with machine learning classification | Industry-leading |
-| 🔄 Format Consistency | Standardized JSON schema output for seamless integration | Schema-validated |
 
-### 🧠 AI/ML Components
-| Component | Technology | Purpose |
-|-----------|------------|---------|
-| Font Classification | Custom CNN Model | Typography pattern recognition |
-| Title Detection | Machine Learning + Heuristics | Document title identification |
-| Hierarchy Detection | NLP + Structural Analysis | Heading level classification |
-| Confidence Scoring | Statistical Analysis | Reliability measurement |
-
+| Feature | Description |
+|---------|-------------|
+| 🎯 Title Detection | Extracts document titles using font size and position analysis |
+| 📑 Hierarchical Parsing | Detects H1/H2/H3-style headings from PDF structure |
+| 📍 Page Mapping | Associates extracted headings with corresponding page numbers |
+| ⚡ Multi-PDF Support | Supports processing multiple PDF documents |
+| 🏗 Typography Analysis | Uses font styles and layout patterns for structure detection |
+| 🔄 Structured JSON Output | Generates clean and machine-readable JSON output |
 ---
 
 ## 🏗 System Architecture
@@ -135,13 +127,13 @@ flowchart TB
 
 </div>
 
-### 🧠 Technical Components
-- **PDF Parser**: PyMuPDF-based extraction with custom enhancements
-- **Font Analysis Engine**: CNN-based typography classification
-- **Hierarchical Detector**: Multi-layer perceptron for heading classification
-- **Confidence Scoring**: Statistical reliability measurement system
-- **Batch Processor**: Concurrent processing with resource optimization
+## 🧠 Technical Components
 
+- **PDF Parser** – Extracts text and layout information using PyMuPDF
+- **Title Extractor** – Detects titles using font size and positioning
+- **Heading Detector** – Identifies H1/H2/H3-style headings
+- **JSON Formatter** – Generates structured JSON output
+- **Processing Pipeline** – Handles PDF parsing and outline generation
 ---
 
 ## 🚀 Installation & Quick Start
@@ -185,9 +177,6 @@ python main.py --input sample.pdf --confidence 0.85 --output outline.json
 python main.py \
   --input sample.pdf \
   --output outline.json \
-  --confidence 0.90 \
-  --include-fonts \
-  --detailed-analysis \
   --performance-metrics
 ```
 
@@ -222,71 +211,33 @@ python -m uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
 ```json
 {
   "document_title": "Machine Learning in Production Systems",
-  "confidence_score": 0.96,
   "total_pages": 47,
   "processing_time": "1.8s",
-  "extraction_metadata": {
-    "font_families_detected": 4,
-    "heading_levels_found": 3,
-    "total_structural_elements": 127
-  },
   "outline": [
     {
       "type": "title",
       "text": "Machine Learning in Production Systems",
-      "page": 1,
-      "level": 0,
-      "confidence": 0.96,
-      "font_info": {
-        "size": 24,
-        "weight": "bold",
-        "family": "Arial",
-        "color": "#000000"
-      },
-      "position": {
-        "x": 72,
-        "y": 120,
-        "width": 450,
-        "height": 32
-      }
+      "page": 1
     },
     {
       "type": "heading",
       "text": "Introduction to MLOps",
       "page": 3,
-      "level": 1,
-      "confidence": 0.94,
-      "font_info": {
-        "size": 18,
-        "weight": "bold",
-        "family": "Arial"
-      },
-      "subsections": 3
+      "level": "H1"
     },
     {
       "type": "heading",
       "text": "Data Pipeline Architecture",
       "page": 8,
-      "level": 2,
-      "confidence": 0.92,
-      "parent_section": "Introduction to MLOps",
-      "subsections": 4
+      "level": "H2"
     },
     {
       "type": "heading",
       "text": "Model Deployment Strategies",
       "page": 15,
-      "level": 1,
-      "confidence": 0.95,
-      "subsections": 6
+      "level": "H1"
     }
-  ],
-  "quality_metrics": {
-    "title_detection_confidence": 0.96,
-    "hierarchy_consistency": 0.94,
-    "page_mapping_accuracy": 1.0,
-    "overall_structure_score": 0.95
-  }
+  ]
 }
 ```
 ## ⚡ Performance & Execution
@@ -559,7 +510,7 @@ adobe_1A/                           # Round 1A: PDF Structure Engine
 
 **© 2025 Connecting the Dots Team | Adobe India Hackathon 2025**
 
-*This README showcases our commitment to building not just a hackathon project, but a production-ready solution that addresses real-world enterprise challenges with innovative AI-powered technology.*
+*This project was developed as part of Adobe India Hackathon 2025 to demonstrate structured PDF outline extraction using Python and PyMuPDF.*
 
 </div>
 
