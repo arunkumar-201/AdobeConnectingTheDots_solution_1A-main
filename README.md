@@ -33,7 +33,7 @@ In today's enterprise environment, organizations process thousands of PDF docume
 
 ### Our Solution: PDF Structure Engine 🧩
 
-A revolutionary AI-powered system that transforms unstructured PDF chaos into machine-readable JSON structures with exceptional accuracy and speed.
+A Python-based PDF structure extraction system that converts unstructured PDF documents into structured JSON outlines using typography and layout analysis.
 
 ```mermaid
 graph TD
@@ -289,49 +289,34 @@ python -m uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
   }
 }
 ```
+## ⚡ Performance & Execution
 
-## ⚡ Performance Benchmarks
+### 📈 Processing Characteristics
 
-### 🏃‍♂️ Speed Comparison
+| Feature | Observation |
+|---|---|
+| ⚡ PDF Processing | Fast execution for small and medium-sized PDFs |
+| 📑 Heading Detection | Supports structured H1/H2/H3 extraction |
+| 📍 Page Mapping | Associates extracted headings with page numbers |
+| 💻 Offline Execution | Runs fully locally without internet dependency |
+| 🐳 Docker Support | Compatible with Docker-based execution |
+| 🔄 Multi-PDF Processing | Can process multiple PDFs sequentially |
+| 🛠 Lightweight Workflow | Uses Python and PyMuPDF for efficient processing |
 
-| Component | Our Solution | Industry Standard | Improvement |
-|-----------|--------------|-------------------|-------------|
-| **PDF Parsing** | 1.8s avg | 8–12s | **5.6× faster** |
-| **Title Detection** | 96% accuracy | 73% accuracy | **+31% better** |
-| **Batch Processing** | 50 PDFs/min | 8–10 PDFs/min | **5× throughput** |
-| **Memory Usage** | 256MB avg | 1.2GB avg | **80% less** |
-| **CPU Utilization** | 45% avg | 85% avg | **47% more efficient** |
+### 📊 Tested Scenarios
 
-### 📊 Accuracy Metrics
+| Document Type | Status |
+|---|---|
+| Technical PDFs | ✅ Tested |
+| Research Papers | ✅ Tested |
+| Educational Documents | ✅ Tested |
+| Structured Reports | ✅ Tested |
 
-<div align="center">
+### 🔍 Notes
 
-**Round 1A Performance:**  
-████████████████████████████████████████████████████ 96% Title Detection  
-██████████████████████████████████████████████████ 94% Heading Hierarchy  
-████████████████████████████████████████████████████ 100% Page Mapping  
-███████████████████████████████████████████████████ 98% JSON Validity  
-██████████████████████████████████████████████████ 95% Overall Structure  
-
-</div>
-
-### 🔥 Stress Test Results
-- ✅ **1000+ PDFs** processed simultaneously without failure
-- ✅ **47GB** total document size handled in single batch
-- ✅ **99.7% uptime** over 72-hour continuous operation
-- ✅ **<2s average** response time under maximum load
-- ✅ **Zero memory leaks** detected during extended testing
-
-### 📈 Scalability Metrics
-
-| Load Level | Documents/Min | Response Time | Memory Usage | Success Rate |
-|------------|---------------|---------------|--------------|--------------|
-| Light (1-10) | 45 | 1.2s | 180MB | 100% |
-| Medium (11-25) | 38 | 1.8s | 240MB | 99.8% |
-| Heavy (26-50) | 32 | 2.4s | 320MB | 99.5% |
-| Extreme (51+) | 28 | 3.1s | 450MB | 99.2% |
-
----
+- Processing time may vary depending on PDF size and formatting complexity.
+- Complex layouts and scanned PDFs may require additional improvements such as OCR support.
+- Designed for structured document outline extraction and JSON generation.
 
 ## 👥 Meet Our Team
 
@@ -339,35 +324,35 @@ python -m uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
 
 | 🎓 **Danda Arun Kumar** | 🎓 **Panchireddi Praveen** | 🎓 **Kollepara Venkata Sri Chakravarthi** |
 |------------------------|---------------------------|-----------------------------------------|
-| **Role:** Lead Developer & System Architect& ML Engineer | **Role:** ML Engineer & AI Specialist | **Role:** Backend & DevOps Engineer |
+| **Role:** Lead Developer | **Role:** Processing & Logic Support | **Role:** Backend & Deployment Support |
 | **Education:** B.Tech – Data Science | **Education:** B.Tech – Information Technology | **Education:** B.Tech – Computer Science Engineering |
 | **Contributions:** | **Contributions:** | **Contributions:** |
-| • Developed PDF Structure Engine Core <br> • System Architecture Design <br> • Docker & CI/CD Pipeline Setup <br> • Performance Optimization <br> • API Design & Implementation <br> • Built ML Classification Models <br> | • Built ML Classification Models <br> • Font Analysis Algorithm Development <br> • Confidence Scoring System <br> • NLP-based Heading Detection <br> • Model Training & Validation | • Backend Infrastructure Development <br> • Database Design & Optimization <br> • Testing Framework Implementation <br> • Performance Monitoring Setup <br> • Production Deployment Strategy |
-| **Skills:** Python, Docker, System Design, AI/ML | **Skills:** Machine Learning, NLP, TensorFlow, Data Science | **Skills:** Backend Development, DevOps, Testing, Cloud Infrastructure |
+| • Developed core PDF processing pipeline <br> • Implemented title and heading extraction <br> • Worked on project structure and execution flow <br> • Docker setup and environment configuration | • Assisted in heading detection logic <br> • Worked on typography-based analysis <br> • Helped validate extracted outputs and JSON structure | • Assisted with backend setup <br> • Worked on testing and project execution <br> • Helped manage deployment and workflow support |
+| **Skills:** Python, PDF Processing, Docker | **Skills:** Python, Text Processing, JSON Handling | **Skills:** Backend Basics, Deployment, Debugging |
 
 </div>
-
 ---
 
-## 🎯 Hackathon Compliance
+# 🎯 Hackathon Compliance
 
-### ✅ Round 1A Requirements
-- [x] **PDF Title Extraction** → 96% accuracy with advanced font analysis and positioning algorithms
-- [x] **H1/H2/H3 Hierarchy Detection** → Perfect nesting with confidence scores and parent-child relationships  
-- [x] **Page Number Mapping** → 100% precision with coordinate-based positioning system
-- [x] **JSON Output Format** → Schema-validated, well-structured output with comprehensive metadata
-- [x] **Batch Processing** → Concurrent processing of 50+ PDFs with resource optimization
-- [x] **Error Handling** → Comprehensive exception handling with graceful degradation
-- [x] **Performance Optimization** → Sub-2 second processing with memory efficiency
+## ✅ Round 1A Requirements Covered
 
-### 🏆 Extra Credit Features
-- [x] **Real-time Processing** → WebSocket API for live processing updates
-- [x] **Confidence Scoring** → Statistical reliability measurement for all extractions
-- [x] **Font Analysis** → Advanced typography classification with CNN models
-- [x] **API Documentation** → Complete OpenAPI specification with interactive docs
-- [x] **Comprehensive Testing** → 95% code coverage with unit and integration tests
-- [x] **Production Ready** → Docker containerization, monitoring, and logging
-- [x] **Performance Analytics** → Detailed processing metrics and benchmarking
+- [x] PDF title extraction
+- [x] H1/H2/H3 heading detection
+- [x] Page number mapping
+- [x] Structured JSON output generation
+- [x] Multi-PDF processing support
+- [x] Offline/local execution
+- [x] Docker-compatible setup
+- [x] Error handling for invalid or unsupported PDFs
+
+## 🌟 Additional Improvements
+
+- [x] Typography-based heading analysis
+- [x] Modular processing pipeline
+- [x] Lightweight PDF processing workflow
+- [x] Structured and readable JSON formatting
+- [x] Cross-platform execution support
 
 ---
 
@@ -388,22 +373,24 @@ docker-compose -f docker-compose.test.yml up --abort-on-container-exit
 python tests/load_test.py --concurrent-users 100 --duration 300s
 ```
 
-### 📊 Quality Metrics
-- ✅ **95% Code Coverage** - Comprehensive test suite
-- ✅ **100% Type Annotations** - Full static type checking
-- ✅ **Zero Critical Security Issues** - Security audit passed
-- ✅ **A+ Performance Grade** - Optimized for production use
-- ✅ **SOLID Principles** - Clean, maintainable architecture
-- ✅ **Documentation Coverage** - 100% API documentation
+## 🧪 Testing & Validation
 
-### 🔍 Testing Categories
-| Test Type | Coverage | Status |
-|-----------|----------|--------|
-| Unit Tests | 127 tests | ✅ Passing |
-| Integration Tests | 34 tests | ✅ Passing |
-| Performance Tests | 15 benchmarks | ✅ Passing |
-| Security Tests | 8 audits | ✅ Passing |
-| Load Tests | 5 scenarios | ✅ Passing |
+### ✔ Validation Performed
+
+- Tested with multiple PDF document formats
+- Verified title and heading extraction outputs
+- Checked JSON output consistency
+- Validated processing on different document sizes
+- Confirmed local execution and Docker compatibility
+
+### 📄 Tested Document Types
+
+| Document Type | Status |
+|---|---|
+| Technical PDFs | ✅ Tested |
+| Research Papers | ✅ Tested |
+| Educational Documents | ✅ Tested |
+| Structured Reports | ✅ Tested |
 
 ---
 
@@ -460,100 +447,92 @@ adobe_1A/                           # Round 1A: PDF Structure Engine
 
 ---
 
-## 🔮 Future Roadmap
+# 🔮 Future Roadmap
 
-### 🚀 Phase 2: Advanced Features (Post-Hackathon)
-- [ ] 🌍 **Multi-language Support** → Process documents in 25+ languages with Unicode handling
-- [ ] 🔍 **OCR Integration** → Handle scanned PDFs and image-based documents  
-- [ ] 🤖 **Custom Model Training** → Fine-tune models on domain-specific document types
-- [ ] ☁️ **Cloud Native Deployment** → AWS/Azure deployment with auto-scaling capabilities
-- [ ] 📱 **Mobile SDK** → iOS/Android libraries for mobile integration
-- [ ] 🔄 **Real-time Collaboration** → Multi-user document processing workflows
+## 🚀 Planned Enhancements
 
-### 📈 Enterprise Scalability Plans
-- [ ] **Microservices Architecture** → Independent service scaling and deployment
-- [ ] **GraphQL API** → Flexible data querying and real-time subscriptions
-- [ ] **Enterprise SSO** → SAML/OAuth integration for corporate environments
-- [ ] **Advanced Analytics** → Machine learning insights and usage patterns
-- [ ] **Compliance Features** → GDPR, HIPAA, and SOC2 compliance modules
+- 🌍 Multi-language PDF support
+- 🔍 OCR support for scanned PDFs
+- 📑 Improved heading classification
+- 🧠 Better typography and layout analysis
+- ⚡ Faster batch PDF processing
+- 📊 Enhanced document analytics
+- ☁️ Optional cloud deployment support
+- 📚 Support for additional document formats
+- 💻 Simple web-based interface for uploads and visualization
+- 🔄 Improved handling of complex PDF layouts
 
----
+## 📈 Long-Term Goals
 
-## 🏆 Competitive Advantages
-
-| Feature | PDF Structure Engine | Competitor A | Competitor B | Competitor C |
-|---------|---------------------|--------------|--------------|--------------|
-| **Processing Speed** | ⚡ 1.8s avg | 🐌 8-12s | 🐌 5-8s | 🐌 6-10s |
-| **Title Detection Accuracy** | 🎯 96% | 📊 73% | 📊 81% | 📊 78% |
-| **Hierarchical Parsing** | 📑 H1/H2/H3 + nesting | 📄 Basic headings | 📄 H1/H2 only | ❌ None |
-| **Batch Processing** | ⚡ 50+ concurrent | 🔄 5-10 sequential | 🔄 8-12 sequential | 🔄 3-5 sequential |
-| **Offline Capability** | ✅ 100% offline | ❌ Cloud only | ❌ Cloud only | ❌ Cloud only |
-| **Docker Support** | 🐳 Multi-architecture | 🐳 Linux only | ❌ None | 🐳 Basic |
-| **API Documentation** | 📚 Complete OpenAPI | 📄 Basic docs | ❌ None | 📄 Minimal |
-| **Confidence Scoring** | 📊 Statistical analysis | ❌ None | ❌ None | 📊 Basic |
-| **Memory Efficiency** | 💾 256MB avg | 💾 1.2GB avg | 💾 800MB avg | 💾 950MB avg |
-| **JSON Schema Validation** | ✅ Full validation | ❌ None | ✅ Basic | ❌ None |
+- Modular and scalable processing pipeline
+- Better PDF metadata extraction
+- Advanced document structure visualization
+- Integration with AI-based summarization systems
+- Improved support for research and technical documents
 
 ---
 
-## 📊 Usage Analytics
+## 🌟 Project Highlights
 
-### 📈 Performance Metrics (Test Phase)
+| Feature | Description |
+|---|---|
+| 📄 PDF Processing | Extracts structured information from PDF documents |
+| 🎯 Title Detection | Identifies document titles using typography analysis |
+| 📑 Heading Extraction | Detects H1/H2/H3-style headings automatically |
+| 📍 Page Mapping | Associates headings with corresponding page numbers |
+| 🔄 Structured JSON Output | Generates machine-readable hierarchical JSON |
+| ⚡ Multi-PDF Support | Supports processing multiple PDF files |
+| 🐳 Docker Compatibility | Can run in Docker-based environments |
+| 💻 Offline Execution | Works without external APIs or internet access |
+| 🧩 Modular Architecture | Organized codebase with separate processing modules |
+| 🛠 Lightweight Pipeline | Efficient local execution using Python and PyMuPDF |
 
-<div align="center">
+---
 
-📊 **Total Documents Processed:** 2,847  
-⏱️ **Average Processing Time:** 1.8s  
-👥 **Active Test Users:** 47  
-⭐ **User Satisfaction:** 4.8/5  
-🐛 **Critical Bugs:** 0  
-📈 **Success Rate:** 99.6%  
-💾 **Average Memory Usage:** 256MB  
-🔄 **Batch Processing Efficiency:** 94%  
 
-</div>
+## 📊 Project Insights
 
-### 🎯 Document Type Analysis
-1. 📑 **Technical Documentation** (34% of usage) - API docs, manuals, specifications
-2. 📊 **Research Papers** (28% of usage) - Academic papers, whitepapers, studies  
-3. 📋 **Business Reports** (22% of usage) - Financial reports, presentations, proposals
-4. 📚 **Educational Content** (16% of usage) - Textbooks, course materials, guides
+### 📈 Processing Characteristics
 
-### 📈 Processing Statistics
-| Document Size | Count | Avg Time | Success Rate |
-|---------------|-------|----------|--------------|
-| 1-10 pages | 1,247 | 1.2s | 99.9% |
-| 11-25 pages | 892 | 1.8s | 99.7% |
-| 26-50 pages | 534 | 2.4s | 99.5% |
-| 51+ pages | 174 | 3.8s | 99.1% |
+- Supports processing of multiple PDF documents
+- Performance depends on document size and formatting complexity
+- Lightweight execution suitable for local systems
+- Efficient structured JSON generation from unstructured PDFs
+- Works fully offline without external API dependencies
+
+### 🎯 Supported Document Types
+
+- 📑 Technical Documentation
+- 📊 Research Papers
+- 📋 Business Reports
+- 📚 Educational Materials
+- 📄 General Structured PDFs
+
+### 📈 Processing Observations
+
+| Document Size | Typical Processing Time |
+|---------------|--------------------------|
+| 1–10 pages | Fast processing |
+| 11–25 pages | Moderate processing time |
+| 26–50 pages | Slightly increased processing time |
+| 51+ pages | Depends on PDF complexity and formatting |
 
 ---
 
 ## 🛡️ Security & Privacy
 
 ### 🔒 Security Features
-- ✅ **Zero Data Retention** → Documents processed in memory and immediately discarded
-- ✅ **Local Processing** → No cloud data transmission or external API calls
-- ✅ **Input Validation** → Comprehensive protection against malicious PDF files
-- ✅ **Container Isolation** → Secure Docker environment with minimal attack surface
-- ✅ **Encrypted Communication** → HTTPS/TLS for all API communications
-- ✅ **Access Control** → Role-based authentication and authorization
-- ✅ **Audit Logging** → Complete processing transparency and traceability
 
-### 🔐 Privacy Compliance
-- ✅ **GDPR Compliant** → No personal data collection or storage
-- ✅ **Enterprise Ready** → On-premise deployment option for sensitive data
-- ✅ **Data Sovereignty** → Complete control over data processing location
-- ✅ **Compliance Reporting** → Automated compliance documentation generation
+- ✅ Fully offline PDF processing
+- ✅ No external API calls or cloud dependency
+- ✅ Local document processing
+- ✅ Docker-compatible isolated execution
 
-### 🛡️ Security Audit Results
-| Security Aspect | Status | Details |
-|------------------|--------|---------|
-| Vulnerability Scan | ✅ Passed | Zero critical, zero high vulnerabilities |
-| Dependency Check | ✅ Passed | All dependencies up-to-date and secure |
-| Container Security | ✅ Passed | Minimal base image, non-root user |
-| API Security | ✅ Passed | Rate limiting, input validation, CORS |
-| Data Protection | ✅ Passed | No data persistence, memory cleanup |
+### 🔐 Privacy Considerations
+
+- ✅ Documents are processed locally
+- ✅ No automatic remote storage
+- ✅ Suitable for offline workflows
 
 ---
 
